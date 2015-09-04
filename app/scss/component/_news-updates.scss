@@ -1,0 +1,29 @@
+.news-updates .b-title {
+	margin-bottom: 30px;
+}
+
+.news-updates .form-fields {
+    @include respond-min($bp-large) {
+    	width: 557px;
+      margin: 0 auto;
+    }
+}
+
+.news-updates .input-field {
+	margin: 0 auto;
+	font-size: 20px;
+	color: #444;
+	letter-spacing: .02em;
+	font-weight: 300;
+	border-color: #fff;
+	  @include respond-min($bp-large) {
+	  	margin: 0 15px 0 0;
+	  	width: $form-max-width;
+	  }
+}
+
+.news-updates .u-center {
+	@include respond-min($bp-large) {
+	  text-align: left;
+	}
+}

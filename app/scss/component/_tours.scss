@@ -1,0 +1,71 @@
+
+.tours {
+	text-align: center;
+	  @include respond-min($bp-large) {
+	  	text-align: left;
+	  }
+}
+
+.tours__row {
+	padding: 40px 20px;
+	overflow: hidden;
+	position: relative;
+	border-bottom: 1px solid #dcd9d5;
+
+}
+
+.tours__row:first-child {
+	border-top: 2px solid #000;
+}
+
+.tour__month,
+.tour__day,
+.tour__venue,
+.tour__location {
+	font-size: 18px;
+	letter-spacing: .02em;
+}
+
+.tour__month,
+.tour__day {
+	text-transform: uppercase;
+	font-weight: 700;
+	  @include respond-min($bp-large) {
+	  	float: left;
+	  	width: 6.9%;
+	  	margin-right: 20px;
+	  }
+}
+
+.tour__venue,
+.tour__location {
+	font-weight: 300;
+	color: #444;
+	  @include respond-min($bp-large) {
+	  	float: left;
+	  	width: 27.3%;
+	  	margin-right: 20px;
+	  }	
+}
+
+.tour__day {
+	margin-bottom: 20px;
+}
+
+.tour__location {
+	margin-bottom: 30px;
+}
+
+.tour__day, .tour__location {
+	@include respond-min($bp-large) {
+  	margin-bottom: 0;
+  }
+}
+
+.tour__cta {
+	@include respond-min($bp-large) {
+	  position: absolute;
+	  right: 0;
+	  top: 28px;
+	}
+}

@@ -1,0 +1,21 @@
+$theme-color: $color-gold;
+
+.u-overlay {
+	background-color: $theme-color;
+	background-color: rgba(202,168,76,.8);
+}
+
+.track-info .fa-play-circle,
+.tour__month,
+.track-number,
+.album__year,
+.album-info .fa {
+	color: $theme-color;
+}
+
+.button--theme {
+	background-color: $theme-color;
+	  &:hover, &:focus {
+	  	background-color: $theme-color;
+	  }
+}

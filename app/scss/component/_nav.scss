@@ -1,0 +1,50 @@
+
+.l-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+
+.navigation {
+	display: block;
+	text-align: center;
+	font-family: $body-font;
+}
+
+.navigation--header {
+	display: none;
+		@include respond-min($bp-large) {
+			display: block;
+			padding: 60px 0;
+		}
+}
+
+.navigation ul {
+	display: inline;
+}
+
+.navigation li {
+	display: inline-block;
+}
+
+.navigation__links a {
+	padding: 0 25px;
+	color: #fff;
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+
+.navigation__social a {
+	padding: 0 12px;
+	color: #fff;
+	font-size: 24px;
+}
+
+
+/* colors */
+.navigation li a:hover {
+	color: $color-gold;
+}

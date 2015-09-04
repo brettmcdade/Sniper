@@ -1,0 +1,61 @@
+//------------------------------------*\
+//    $General Layout
+//------------------------------------*/
+
+.l-section {
+	padding: 90px 0;
+	  @include respond-min($bp-medium) {
+	  	padding: 115px 0;
+	  }
+}
+
+.l-inner {
+	margin: 0 auto;
+	padding: 0 $column-gutter;
+	width: 100%;
+	max-width: $container-width;
+}
+
+.l-inner--bleed-small {
+  padding: 0;
+    @include respond-min($bp-large) {
+    	padding: 0 $column-gutter;
+    }
+}
+
+.clearfix:before,
+	.clearfix:after {
+		content: "";
+		display: table;
+	}
+
+	.clearfix:after {
+		clear: both;
+	}
+
+
+//------------------------------------*\
+//    $Layout Footer
+//------------------------------------*/
+
+.l-footer {
+	background-color: #000;
+	padding: 60px 0;
+	  @include respond-min($bp-large) {
+	  	padding: 20px 0;
+	  }
+}
+
+.l-footer .navigation {
+	margin-bottom: 30px;
+	  @include respond-min($bp-large) {
+	  	float: left;
+	  	margin-bottom: 0;
+	  }
+}
+
+.l-footer .copyright {
+	  @include respond-min($bp-large) {
+	  	float: right;
+	  }
+}

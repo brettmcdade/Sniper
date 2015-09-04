@@ -1,0 +1,160 @@
+.music-single-block {
+  margin: 0 auto 55px;
+  max-width: 415px;
+    &:last-child {
+    	margin-bottom: 0;
+    }
+}
+
+.grid--first-row .music-single-block {
+	@include respond-min($bp-large) {
+		margin-bottom: 0;
+	}
+}
+
+.track-info {
+  font-family: $body-font;
+	font-size: 18px;
+	line-height: 28px;
+	letter-spacing: .02em;
+	margin-top: 25px;
+	overflow: hidden;	
+}
+
+.track-info .fa-play-circle {
+	float: left;
+	margin-right: 12px;
+	font-size: 30px;
+}
+
+
+.single__cover, .music-single-block {
+	position: relative;
+}
+
+
+.music-title {
+  float: left;
+  color: #000;
+  width: 170px;
+}
+
+
+.music-time {
+	float: right;
+	font-weight: 300;
+	color: #999;	
+}
+
+
+
+
+
+
+
+/* Album */
+
+.album__item {
+	@include respond-min($bp-large) {
+	  padding-left: 30px;
+	}
+}
+.album-info {
+	overflow: hidden;
+}
+
+.album-info .social-links--inline {
+	margin-top: 25px;
+}
+
+.album-info p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #444;
+  text-align: center;
+  margin-top: 75px;
+}
+
+.album__item {
+	overflow: hidden;
+}
+
+.album__header {
+	padding-bottom: 24px;
+	border-bottom: 2px solid #000;
+	overflow: hidden;
+}
+
+.album__title {
+	float: left;
+	padding-right: 20px;
+	font-size: 24px;
+	font-family: $display-font;
+	letter-spacing: .14em;
+}
+
+.album__year {
+	float: right;
+	padding-right: 20px;
+	font-size: 18px;
+	line-height: 36px;
+}
+
+.tracks ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.tracks li {
+	padding: 20px;
+	border-bottom: 1px solid #dcd9d5;
+	overflow: hidden;
+}
+
+.track-title {
+	font-size: 18px;
+  float: left;
+  letter-spacing: .02em;
+  color: #000;
+  width: 170px;
+}
+
+.track-number {
+	float: left;
+	margin-right: 38px;
+	font-size: 18px;
+}
+
+.track-time {
+	float: right;
+	font-weight: 300;
+	font-size: 18px;
+	letter-spacing: .02em;
+	color: #999;
+}
+
+
+/* Social Links */
+.social-links--inline .social-link {
+	width: 33.33333%;
+	float: left;
+	font-size: 16px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	  &:first-child {
+	  	text-align: left;
+	  }
+	  &:last-child {
+	  	text-align: right;
+	  }
+	  a {
+	  	color: #000;
+	  }
+	  .fa {
+		  font-size: 20px;
+		  margin-right: 7px;
+	  }
+}

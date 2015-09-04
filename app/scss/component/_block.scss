@@ -1,0 +1,32 @@
+.b-section-title {
+	font-family: $display-font;
+	font-size: 58px;
+	line-height: 1;
+	letter-spacing: .14em;
+	text-align: center;
+}
+
+	.b-section-title--border {
+	  border-bottom: 2px solid #000;
+	  padding-bottom: 45px;
+	    @include respond-min($bp-large) {
+	    	padding-bottom: 75px;
+	    }
+	}
+
+.b-title {
+	font-size: 24px;
+  font-family: "Permanent Marker",sans-serif;
+  color: #000;
+  letter-spacing: .2em;
+  line-height: 1;
+  text-align: center;
+}
+  .b-title--light {
+  	color: #fff;
+  }
+
+.b-cta {
+	text-align: center;
+	margin: 55px auto 0;
+}

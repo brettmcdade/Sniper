@@ -1,0 +1,49 @@
+//------------------------------------*\
+//    $FORMS
+//------------------------------------*/
+
+input, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+input {
+  line-height: normal;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/**
+ * Text inputs
+ *
+ * Instead of a '[type]' selector for each kind of form input, we just use a
+ * class to target them, e.g.:
+   <input type=text class=text-input>
+   <input type=email class=text-input>
+   <input type=password class=text-input>
+ *
+ */
+input[type="text"],
+.text-input,
+textarea {
+  padding: 0.5em 1em;
+  border: 1px solid #777;
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+label {
+  display: block;
+  padding-bottom: .25em;
+}

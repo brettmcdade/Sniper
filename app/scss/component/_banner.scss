@@ -1,0 +1,73 @@
+/* -----------------------------------------
+	Banner
+----------------------------------------- */
+
+.banner {
+  display: table;
+  width: 100%;
+  height: 100%;
+  background-repeat: none;
+	background-position: 50%;
+  background-size: cover;
+  position: relative;
+}
+
+.banner--large {
+  //height: 667px;
+  height: 100vh;
+  @include respond-min($bp-medium) {
+    height: 786px;
+  }
+}
+
+.banner__content {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  z-index: 10;
+}
+
+.banner__subtitle {
+	font-family: 'Permanent Marker', sans-serif;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  margin-bottom: 20px;
+  color: #caa84c;
+  text-transform: uppercase;
+}
+
+.banner__title {
+	font-family: 'Permanent Marker', sans-serif;
+  font-size: 58px;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+    @include respond-min($bp-medium) {
+      font-size: 104px;
+    }
+}
+
+.banner__action-btn {
+	font-size: 80px;
+	color: #fff;
+	display: block;
+	text-align: center;
+	margin-top: 25px;
+	cursor: pointer;
+}
+
+/* Overlay masthead image if needed */
+.banner__overlay {
+	background: rgba(0,0,0,.3);
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+}
