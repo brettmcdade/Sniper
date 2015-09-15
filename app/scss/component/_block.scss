@@ -1,18 +1,3 @@
-.b-section-title {
-	font-family: $display-font;
-	font-size: 58px;
-	line-height: 1;
-	letter-spacing: .14em;
-	text-align: center;
-}
-
-	.b-section-title--border {
-	  border-bottom: 2px solid #000;
-	  padding-bottom: 45px;
-	    @include respond-min($bp-large) {
-	    	padding-bottom: 75px;
-	    }
-	}
 
 .b-title {
 	font-size: 24px;
@@ -25,6 +10,33 @@
   .b-title--light {
   	color: #fff;
   }
+
+.b-section .b-title {
+	font-family: $display-font;
+	font-size: 58px;
+	line-height: 1;
+	letter-spacing: .14em;
+	text-align: center;
+}
+
+	.b-section .b-title--border {
+	  border-bottom: 2px solid #000;
+	  padding-bottom: 45px;
+	    @include respond-min($bp-large) {
+	    	padding-bottom: 75px;
+	    }
+	}
+
+	.b-section p {
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 300;
+		margin-bottom: 55px;
+	}
+
+	.b-section > p {
+		margin-top: 30px;
+	}
 
 .b-cta {
 	text-align: center;

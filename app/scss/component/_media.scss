@@ -48,6 +48,17 @@
 
 
 
+/* Video */
+.video {
+  margin: 0 auto 55px;
+    &:last-child {
+    	margin-bottom: 0;
+    }
+}
+
+.video-block {
+	position: relative;
+}
 
 
 
@@ -157,4 +168,23 @@
 		  font-size: 20px;
 		  margin-right: 7px;
 	  }
+}
+
+
+
+.media__thumb {
+	position: relative;
+}
+
+.media .fa-play-circle {
+	font-size: 68px;
+	color: #fff;
+	position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 58px;
+  height: 68px;
 }

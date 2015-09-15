@@ -5,6 +5,12 @@ $theme-color: $color-gold;
 	background-color: rgba(202,168,76,.8);
 }
 
+.nav-3 .logo,
+.hamburger,
+.social-mash__tile--twitter .social-mash__content {
+	background-color: $theme-color;
+}
+
 .track-info .fa-play-circle,
 .tour__month,
 .track-number,
@@ -18,4 +24,10 @@ $theme-color: $color-gold;
 	  &:hover, &:focus {
 	  	background-color: $theme-color;
 	  }
+}
+
+.button:hover,
+.button:focus {
+  color: #fff;
+  background-color: $theme-color;
 }

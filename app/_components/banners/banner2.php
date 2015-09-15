@@ -4,7 +4,7 @@
 	<!-- <div class="banner__overlay"></div> -->
 	<div class="banner__content">
 		<div class="banner__subtitle">New Video</div>
-	  <div class="banner__title">Video Name</div>
+	  <div class="banner__title banner__title--large">Video Name</div>
 	  <i class="banner__action-btn fa fa-play-circle"></i>
 	</div>
 </div>

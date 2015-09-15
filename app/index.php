@@ -2,7 +2,7 @@
 
 
 <?php include('_components/Banners/banner1.php'); ?>
-<?php // include('_components/Banners/banner2.php'); ?>
+<?php //include('_components/Banners/banner2.php'); ?>
 <?php // include('_components/Banners/banner3.php'); ?>
 
 <section class="l-section slab-grey">
@@ -108,7 +108,7 @@
 
 <section>
     <div class="social-mash clearfix">
-    	  <div class="social-mash-row clearfix">
+    	  <div class="social-mash__row clearfix">
 		  	    <div class="social-mash__tile social-mash__tile--twitter">
 		  	    	  <div class="social-mash__content">
 		  	    	  	  <i class="fa fa-twitter"></i>
@@ -123,12 +123,12 @@
 		  	    	  </div>
 		  	    </div>
 		  	    <div class="social-mash__tile social-mash__tile--yt">
-		  	    	  <div class="social-mash__content" style="background-image:url('http://i.ytimg.com/vi/ISmXcHapfO4/maxresdefault.jpg');">
+		  	    	  <div class="social-mash__content" style="background-image:url('http://adrianswish.com/wp-content/uploads/2015/03/Screen-shot-2015-03-15-at-4.12.41-PM.png');">
 		  	    	  	  <i class="fa fa-play-circle"></i>
 		  	    	  </div>
 		  	    </div>
 		  	</div>
-    	  <div class="social-mash-row clearfix">
+    	  <div class="social-mash__row clearfix">
 		  	    <div class="social-mash__tile social-mash__tile--instagram">
 		  	    	  <div class="social-mash__content" style="background-image:url('https://igcdn-photos-f-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-15/11417332_725761794212309_295119133_n.jpg');">
                     <i class="fa fa-instagram"></i>
@@ -136,7 +136,7 @@
 		  	    </div>
 		  	    <div class="social-mash__tile social-mash__tile--yt">
 		  	    	  <div class="social-mash__content" style="background-image:url('http://hipsocietynews.com/wp-content/uploads/2012/06/Screen-Shot-2012-06-04-at-12.47.03-PM.png');">
-		  	    	  	  <i class="fa fa-play-circle"></i>
+		  	    	  	  <i class="fa fa-play-circle js-play-video"></i>
 		  	    	  </div>
 		  	    </div>
 		  	    <div class="social-mash__tile social-mash__tile--twitter">
@@ -153,7 +153,9 @@
 
 <section class="tours l-section slab-grey">
     <div class="l-inner l-inner--bleed-small">
-        <div class="b-section-title b-section-title--border">Tour Dates</div>
+        <div class="b-section">
+        	  <div class="b-title b-title--border">Tour Dates</div>
+        </div>
         <div class="tours__row">
         		<div class="tour__month">Aug 21</div>
         		<div class="tour__day">Tues</div>
@@ -211,6 +213,14 @@
 				</form>
     </div>
 </section>
+
+
+
+<div class="media--video">
+  	<div class="layer"></div>
+  	<div class="close js-close"></div>
+  	</div>
+</div>
 
 <?php include('_includes/footer.php'); ?>
 

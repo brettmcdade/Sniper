@@ -14,10 +14,6 @@
 
 }
 
-.tours__row:first-child {
-	border-top: 2px solid #000;
-}
-
 .tour__month,
 .tour__day,
 .tour__venue,
@@ -67,5 +63,32 @@
 	  position: absolute;
 	  right: 0;
 	  top: 28px;
+	}
+}
+
+.tour__sold-out {
+  display: inline-block;
+  color: #000;
+  background-color: transparent;
+  font-size: 1em;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  text-transform: uppercase;
+  padding: 18px 30px;
+  letter-spacing: .2em;
+}
+
+.l-inner > .tours__row:first-child {
+	@include respond-min($bp-large) {
+	  padding-top: 15px;
+	}
+}
+.l-inner > .tours__row:first-child .tour__cta {
+	@include respond-min($bp-large) {
+	  top: 3px;
 	}
 }

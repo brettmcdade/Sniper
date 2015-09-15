@@ -47,26 +47,8 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Nav 1 -->
-    <div class="l-header clearfix">
-        <div class="l-inner">
-            <nav class="navigation navigation--header">
-                <ul class="navigation__links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Music</a></li>
-                    <li><a href="#">Videos</a></li>
-                    <li><a href="#">Tour</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <ul class="navigation__social">
-                    <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                    <li><a href="#"><i class="fa fa-soundcloud"></i></a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+    <?php include('_components/nav/nav1.php'); ?>
+    <?php //include('_components/nav/nav2.php'); ?>
+    <?php // include('_components/nav/nav3.php'); ?>
+
     <!-- / Nav 1 -->
