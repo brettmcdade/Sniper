@@ -3,7 +3,7 @@
 	<!-- Uncomment line below for a dark overlay over image -->
 	<!-- <div class="banner__overlay"></div> -->
 	<div class="l-inner banner__content">
-	  <div class="banner__title banner__title--large">Nipsey Hussle</div>
+	  <div class="banner__title banner__title--large">Artist Name</div>
 	</div>
 </div>
 <!-- / Masthead 1 -->

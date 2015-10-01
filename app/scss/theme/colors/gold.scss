@@ -11,11 +11,11 @@ $theme-color: $color-gold;
 	background-color: $theme-color;
 }
 
-.track-info .fa-play-circle,
+.b-text .fa-play-circle,
 .tour__month,
 .track-number,
 .album__year,
-.album-info .fa {
+.b-text .fa {
 	color: $theme-color;
 }
 
@@ -30,4 +30,12 @@ $theme-color: $color-gold;
 .button:focus {
   color: #fff;
   background-color: $theme-color;
+}
+
+.tracks li:hover {
+	background-color: #ededeb;
+}
+
+.hover-overlay {
+	background: rgba(202,168,76,.5);
 }

@@ -24,6 +24,9 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
+    <script type="text/javascript" src="js/plugins/jplayer/jplayer/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jplayer/jplayer/jplayer.playlist.js"></script>
+
     <script src="build/js/production.min.js"></script> 
 
     <!-- Call YT iFrame Api -->
@@ -69,6 +72,101 @@
         }
     </script>
     <!-- // YT iFrame Api -->
+
+
+
+
+
+
+
+
+
+    <script>
+        $(document).ready(function() {
+
+            var cssSelector = {
+            jPlayer: "#jquery_jplayer_N", 
+            cssSelectorAncestor: "#jp_container_N"
+            };
+
+            var playlist = [];  // Empty playlist
+
+            var options = {
+                swfPath: "../js/plugins/jPlayer", 
+                supplied: "oga, mp3",
+                autoPlay: false,
+                wmode: "window"
+            };
+
+            var myPlaylist = new jPlayerPlaylist(cssSelector, playlist, options);
+
+
+            // Play Track
+            $(document).on("click", ".addTrack", function(e) {
+                var txt = $(e.target).data('title');
+                var mp3 = $(e.target).data('audiopath');
+
+                myPlaylist.addToBeginning({
+                    title:txt,
+                    mp3:mp3 + ".mp3"
+                });
+                
+                myPlaylist.play(-1); // Begin play automatically
+            });
+
+
+
+            // Set Playlist
+            $(document).on("click", ".setList", function() {
+
+                var index = $("#single-tracklist a").index(this); // this is the dom element clicked
+              var check = $('#jquery_jplayer_N').data().jPlayer.status.paused; // Check if jPlayer is playing a playlist
+                
+            if(check) {
+                    var output = 'myPlaylist.setPlaylist([';
+                    var cells = $('#single-tracklist a');
+
+                    for (var i = 0; i < cells.length; i++) { 
+                        var status = cells[i].getAttribute("data-title"); 
+                        var track = cells[i].getAttribute("data-audiopath");
+                        output += '{ title:"' + status + '", mp3:"' + track + '.mp3" },';
+                    }
+
+                    output += ']);';
+
+                    eval(output);
+
+                    myPlaylist.play(index); // Play selected track automatically
+                } 
+                else {
+                    var output = 'myPlaylist.setPlaylist([';
+                    var cells = $('#single-tracklist a');
+
+                    for (var i = 0; i < cells.length; i++) { 
+                        var status = cells[i].getAttribute("data-title"); 
+                        var track = cells[i].getAttribute("data-audiopath");
+                        output += '{ title:"' + status + '", mp3:"' + track + '.mp3" },';
+                    }
+
+                    output += ']);';
+
+                    eval(output);
+
+                    myPlaylist.select(index);
+                    myPlaylist.option("autoPlay", true);
+                }
+
+            });
+
+
+        });
+    </script>
+
+
+
+
+
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

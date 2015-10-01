@@ -235,3 +235,12 @@
 .hamburger.close {
 	background-color: transparent;
 }
+
+.hamburger.close .hamburger__title {
+	background-color: transparent;
+	display: none;
+}
+
+.hamburger.close .hamburger__icon {
+	display: none;
+}

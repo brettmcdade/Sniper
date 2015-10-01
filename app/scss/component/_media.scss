@@ -1,18 +1,8 @@
-.music-single-block {
-  margin: 0 auto 55px;
-  max-width: 415px;
-    &:last-child {
-    	margin-bottom: 0;
-    }
-}
+//------------------------------------*\
+//    $MEDIA
+//------------------------------------*/
 
-.grid--first-row .music-single-block {
-	@include respond-min($bp-large) {
-		margin-bottom: 0;
-	}
-}
-
-.track-info {
+.media .b-text {
   font-family: $body-font;
 	font-size: 18px;
 	line-height: 28px;
@@ -21,64 +11,147 @@
 	overflow: hidden;	
 }
 
-.track-info .fa-play-circle {
+.media .fa-play-circle {
 	float: left;
 	margin-right: 12px;
 	font-size: 30px;
 }
 
-
-.single__cover, .music-single-block {
+.media__thumb {
 	position: relative;
 }
 
-
-.music-title {
+.media__title {
   float: left;
   color: #000;
   width: 170px;
 }
 
+  .inverse .media__title {
+  	color: #fff;
+  }
 
-.music-time {
+
+.media__time {
 	float: right;
 	font-weight: 300;
 	color: #999;	
 }
 
 
+//------------------------------------*\
+//    $MEDIA - SINGLES
+//------------------------------------*/
 
-/* Video */
-.video {
+.media--single .block-thumb {
   margin: 0 auto 55px;
+  max-width: 415px;
     &:last-child {
     	margin-bottom: 0;
-    }
+    }	
 }
 
-.video-block {
+.grid--first-row .block-thumb {
+	@include respond-min($bp-large) {
+		margin-bottom: 0;
+	}  
+}
+
+
+
+.single__cover {
 	position: relative;
 }
 
 
 
 
-/* Album */
+
+//------------------------------------*\
+//    $MEDIA - VIDEO
+//------------------------------------*/
+
+.media--video {
+  margin: 0 auto 55px;
+    &:last-child {
+    	margin-bottom: 0;
+    }
+}
+
+.media--video .grid {
+	@include respond-min($bp-medium) {
+		margin-top: 60px;
+		 &.grid--first-row {
+		 	margin-top: 0;
+		 }
+	}
+}
+
+.media--video .fa-play-circle {
+	font-size: 68px;
+	color: #fff;
+	position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 58px;
+  height: 68px;
+}
+
+.media--video .media__block {
+	position: relative;
+	margin-bottom: 60px;
+	@include respond-min($bp-medium) {
+		margin-bottom: 0;
+	}
+}
+
+  .media--video .b-text {
+  	padding-bottom: 30px;
+    border-bottom: 1px solid #dcd9d5;
+  }
+
+  .media--video .media__title {
+  	width: auto;
+  	max-width: 424px;
+  }
+
+
+
+
+//------------------------------------*\
+//    $MEDIA - ALBUM
+//------------------------------------*/
+
+.media--album .media__block {
+	margin-top: 75px;
+	  @include respond-min($bp-large) {
+	    margin-top: 100px;
+	  }
+}
+.media--album .media__block:first-child {
+  margin-top: 0;
+}
 
 .album__item {
+	margin-top: 30px;
 	@include respond-min($bp-large) {
+		margin-top: 0;
 	  padding-left: 30px;
 	}
 }
-.album-info {
+.media--album .block-text {
 	overflow: hidden;
 }
 
-.album-info .social-links--inline {
+.media--album .social-links--inline {
 	margin-top: 25px;
+	overflow: hidden;
 }
 
-.album-info p {
+.media--album p {
   font-size: 18px;
   font-weight: 300;
   line-height: 28px;
@@ -172,19 +245,4 @@
 
 
 
-.media__thumb {
-	position: relative;
-}
 
-.media .fa-play-circle {
-	font-size: 68px;
-	color: #fff;
-	position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  width: 58px;
-  height: 68px;
-}

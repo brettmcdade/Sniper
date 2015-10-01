@@ -1,5 +1,6 @@
 $( document ).ready(function() {
 
+  lightboxInit();
 
   // swap svg to png for browsers that won't support it
   if (!Modernizr.svg) {
@@ -97,16 +98,20 @@ $(window).resize(function(){
 
 
 
+function lightboxInit() {
+  $('.js-play-video').click(function(){
+      var $thisHref = $(this).attr('data-id');
+      buildLightBox($thisHref);
+  }); 
+}
 
-$('.js-play-video').on('touchstart click', function() {
-  $('.media--video').addClass('is-showing');
-  $('.media--video .layer').append('<iframe id="video" width="100%" height="100%" src="http://www.youtube.com/embed/Z-48u_uWMHY?enablejsapi=1&vq=hd1080&controls=1&rel=0&fs=1&modestbranding=1&showinfo=0&wmode=transparent&autoplay=1" frameborder="0"></iframe>')
-});
-
-$('.js-close').on('touchstart click', function() {
-  $('.media--video').removeClass('is-showing');
-});
-
+function buildLightBox(id) {
+   $('<div class="media--video__content">').appendTo('body').html('<div class="layer"><iframe id="video" width="100%" height="100%" src="http://www.youtube.com/embed/' + id + '?enablejsapi=1&vq=hd1080&controls=1&rel=0&fs=1&modestbranding=1&showinfo=0&wmode=transparent&autoplay=1" frameborder="0"></iframe></div><div class="close js-close"></div>');
+  
+    $('.js-close').on('click',function(e) {
+       $('.media--video').remove();
+    });
+}
 
 
 }); //end

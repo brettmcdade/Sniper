@@ -4,8 +4,8 @@
             <nav class="navigation navigation--header">
                 <ul class="navigation__links">
                     <li><a href="/">Home</a></li>
-                    <li><a href="#">Music</a></li>
-                    <li><a href="#">Videos</a></li>
+                    <li><a href="music.php">Music</a></li>
+                    <li><a href="videos.php">Videos</a></li>
                     <li><a href="tours.php">Tour</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="contact.php">Contact</a></li>
@@ -34,8 +34,8 @@
       <nav class="off-canvas__list">
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="#">Music</a></li>
-            <li><a href="#">Videos</a></li>
+            <li><a href="music.php">Music</a></li>
+            <li><a href="videos.php">Videos</a></li>
             <li><a href="tours.php">Tour</a></li>
             <li><a href="#">About</a></li>
             <li><a href="contact.php">Contact</a></li>
