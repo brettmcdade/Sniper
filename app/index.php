@@ -21,17 +21,19 @@
 				        	  <div class="grid__column block-thumb">
 					        	  	<img class="media__artwork u-border" src="images/fpo_single-thumb.png" />
 						        	  <div class="b-text">
-						        	  		  <i class="fa fa-play-circle"></i>
-						    	  		  	  <div class="media__title">Song Name</div>
-						    	  		  	  <div class="media__time">2:20</div>
+						        	    <button class="js-play button--media fa fa-play-circle" data-title="Test" data-streamurl="http://brettmcdade.com/audio/Dom_Kennedy/My_Type_Of_Party"></button>
+				        	  		  <!--<i class="fa fa-play-circle"></i>-->
+				    	  		  	  <div class="media__title">Song Name</div>
+				    	  		  	  <div class="media__time">2:20</div>
 						    	  		 </div>
 				        	  </div>
+
 				        	  <div class="grid__column block-thumb">
 					        	  	<img class="media__artwork u-border" src="images/fpo_single-thumb.png" />
 					        	  	<div class="b-text">
-					        	  		  <i class="fa fa-play-circle"></i>
-					    	  		  	  <div class="media__title">Long Song Name Would Look Like This</div>
-					    	  		  	  <div class="media__time">2:20</div>
+						        	    <a class="js-play button--media fa fa-play-circle" href="#" data-title="Test" data-streamurl="http://brettmcdade.com/audio/Kendrick_Lamar/Vanity_Slave_Pt2"></a>
+					    	  		  	<div class="media__title">Long Song Name Would Look Like This</div>
+					    	  		  	<div class="media__time">2:20</div>
 					    	  		  </div>
 				        	  </div>
 				        	  <div class="grid__column block-thumb">
@@ -260,6 +262,7 @@
 <div id="jquery_jplayer_N" class="jp-jplayer"></div>
 
 				<div id="jp_container_N" class="jp-audio">
+					<!--
 					<div class="jp-type-playlist">
 						
 						<div id="playlist-queue" class="tracklist jp-playlist">
@@ -271,16 +274,11 @@
 							<span>Update Required</span>
 							To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
 						</div>
-
-							</div>
-						</div>
-							
-					</div>
+					-->		
 				</div>
 
 
-<a class="addTrack" href="javascript:;" data-title="My Type Of Party" data-audiopath="http://brettmcdade.com/audio/Dom_Kennedy/My_Type_Of_Party">
-yo</a>
+
 
 
 <?php include('_includes/footer.php'); ?>

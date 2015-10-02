@@ -25,7 +25,7 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
     <script type="text/javascript" src="js/plugins/jplayer/jplayer/jquery.jplayer.min.js"></script>
-    <script type="text/javascript" src="js/plugins/jplayer/jplayer/jplayer.playlist.js"></script>
+    <script type="text/javascript" src="js/plugins/jplayer/add-on/jplayer.playlist.min.js"></script>
 
     <script src="build/js/production.min.js"></script> 
 
@@ -102,60 +102,27 @@
 
 
             // Play Track
-            $(document).on("click", ".addTrack", function(e) {
+            $(document).on("click", ".js-play", function(e) {
+                e.preventDefault();
                 var txt = $(e.target).data('title');
-                var mp3 = $(e.target).data('audiopath');
+                var mp3 = $(e.target).data('streamurl');
 
-                myPlaylist.addToBeginning({
+                myPlaylist.add({
                     title:txt,
                     mp3:mp3 + ".mp3"
                 });
                 
                 myPlaylist.play(-1); // Begin play automatically
+
+                $(this).removeClass('js-play').addClass('js-pause');
+                $(this).removeClass('fa-play-circle').addClass('fa-pause');
             });
 
-
-
-            // Set Playlist
-            $(document).on("click", ".setList", function() {
-
-                var index = $("#single-tracklist a").index(this); // this is the dom element clicked
-              var check = $('#jquery_jplayer_N').data().jPlayer.status.paused; // Check if jPlayer is playing a playlist
-                
-            if(check) {
-                    var output = 'myPlaylist.setPlaylist([';
-                    var cells = $('#single-tracklist a');
-
-                    for (var i = 0; i < cells.length; i++) { 
-                        var status = cells[i].getAttribute("data-title"); 
-                        var track = cells[i].getAttribute("data-audiopath");
-                        output += '{ title:"' + status + '", mp3:"' + track + '.mp3" },';
-                    }
-
-                    output += ']);';
-
-                    eval(output);
-
-                    myPlaylist.play(index); // Play selected track automatically
-                } 
-                else {
-                    var output = 'myPlaylist.setPlaylist([';
-                    var cells = $('#single-tracklist a');
-
-                    for (var i = 0; i < cells.length; i++) { 
-                        var status = cells[i].getAttribute("data-title"); 
-                        var track = cells[i].getAttribute("data-audiopath");
-                        output += '{ title:"' + status + '", mp3:"' + track + '.mp3" },';
-                    }
-
-                    output += ']);';
-
-                    eval(output);
-
-                    myPlaylist.select(index);
-                    myPlaylist.option("autoPlay", true);
-                }
-
+            $(document).on("click", ".js-pause", function(e) {
+                e.preventDefault();
+                myPlaylist.pause();
+                $(this).removeClass('js-pause').addClass('js-play');
+                $(this).removeClass('fa-pause').addClass('fa-play-circle');
             });
 
 
