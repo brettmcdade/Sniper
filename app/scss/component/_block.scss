@@ -1,7 +1,7 @@
 
 .b-title {
 	font-size: 24px;
-  font-family: "Permanent Marker",sans-serif;
+  font-family: $display-font;
   color: #000;
   letter-spacing: .2em;
   line-height: 1;
@@ -21,10 +21,13 @@
 
 .b-section .b-title {
 	font-family: $display-font;
-	font-size: 58px;
+	font-size: 50px;
 	line-height: 1;
 	letter-spacing: .14em;
 	text-align: center;
+	  @include respond-min($bp-medium) {
+    	font-size: 58px;
+    }
 }
 
 	.b-section .b-title--border {
@@ -53,6 +56,47 @@
 
 .block-thumb {
 	position: relative;
+}
+
+.b-text p {
+	font-size: 18px;
+	line-height: 28px;
+	font-weight: 300;
+	margin-bottom: 35px;
+}
+
+.b-text .pullquote {
+	margin: 0 0 35px;
+	padding-left: 22px;
+	border-left: 5px solid #ccc;
+	  @include respond-min($bp-large) {
+	  	margin-left: -27px;
+	  }
+	p {
+		margin: 0;
+		font-family: $display-font;
+		font-size: 24px;
+		line-height: 28px;
+	}
+}
+
+.b-text ul {
+	margin-bottom: 35px;
+	list-style-position: inside;
+	li {
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 28px;
+	}
+}
+
+.b-text a,
+.b-section a {
+	text-decoration: underline;
+}
+
+.b-text--form {
+	font-weight: 300;
 }
 
 

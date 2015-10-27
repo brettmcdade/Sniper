@@ -1,0 +1,83 @@
+$theme-color: $color-gold;
+//$theme-color: #50c7c1;
+
+/* Navigation */
+.navigation li a:hover {
+	color: $theme-color;
+}
+
+//.nav-3 .logo,
+.hamburger,
+.hamburger.close span.slice1, 
+.hamburger.close span.slice3 {
+	background: $theme-color;
+}
+
+
+/* Icons */
+.social-links--inline .social-link .fa,
+.b-text .fa-play-circle,
+.b-text .fa,
+.media__playlist li:hover:before,
+.is-playing:before {
+	color: $theme-color;
+}
+
+
+/* Text */
+.tour__month,
+.playlist-number,
+.b-meta,
+.b-text a {
+	color: $theme-color;	
+}
+.b-text .pullquote { 
+	border-color: $theme-color;
+}
+
+
+.u-overlay {
+	@include background-color($theme-color, 0.8);
+}
+
+
+.social-mash__tile--twitter .social-mash__content {
+	background-color: $theme-color;
+}
+
+
+/* Buttons */
+.button--theme {
+	background-color: $theme-color;
+	  &:hover, &:focus {
+	  	background-color: $theme-color;
+	  }
+}
+
+
+.button:hover,
+.button:focus {
+  color: #fff;
+  background-color: $theme-color;
+}
+
+.media__playlist li:hover {
+	background-color: #ededeb;
+}
+
+.hover-overlay {
+	@include background-color($theme-color, 0.5);
+}
+
+
+
+
+.banner__subtitle {
+	color: $theme-color;
+}
+
+
+
+.bar {
+	background-color: $theme-color;
+}

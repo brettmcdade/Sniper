@@ -1,0 +1,15 @@
+p {
+	margin: 0;
+	color: #444;
+}
+
+.copyright {
+	font-size: 10px;
+	letter-spacing: .2em;
+	color: #fff;
+	text-align: center;
+	  @include respond-min($bp-large) {
+	  	font-size: 12px;
+	  	margin-top: 10px;
+	  }
+}

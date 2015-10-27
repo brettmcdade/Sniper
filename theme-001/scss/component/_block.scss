@@ -1,0 +1,115 @@
+
+.b-title {
+	font-size: 24px;
+  font-family: $display-font;
+  color: #000;
+  letter-spacing: .2em;
+  line-height: 1;
+  text-align: center;
+}
+  .b-title--light {
+  	color: #fff;
+  }
+
+  .inverse .b-title {
+  	color: #fff;
+  }
+
+  .b-title--margin {
+  	margin-bottom: 90px;
+  }
+
+.b-section .b-title {
+	font-family: $display-font;
+	font-size: 50px;
+	line-height: 1;
+	letter-spacing: .14em;
+	text-align: center;
+	  @include respond-min($bp-medium) {
+    	font-size: 58px;
+    }
+}
+
+	.b-section .b-title--border {
+	  border-bottom: 2px solid #000;
+	  padding-bottom: 45px;
+	    @include respond-min($bp-large) {
+	    	padding-bottom: 75px;
+	    }
+	}
+
+	.b-section p {
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 300;
+		margin-bottom: 55px;
+	}
+
+	.b-section > p {
+		margin-top: 30px;
+	}
+
+.b-cta {
+	text-align: center;
+	margin: 55px auto 0;
+}
+
+.block-thumb {
+	position: relative;
+}
+
+.b-text p {
+	font-size: 18px;
+	line-height: 28px;
+	font-weight: 300;
+	margin-bottom: 35px;
+}
+
+.b-text .pullquote {
+	margin: 0 0 35px;
+	padding-left: 22px;
+	border-left: 5px solid #ccc;
+	  @include respond-min($bp-large) {
+	  	margin-left: -27px;
+	  }
+	p {
+		margin: 0;
+		font-family: $display-font;
+		font-size: 24px;
+		line-height: 28px;
+	}
+}
+
+.b-text ul {
+	margin-bottom: 35px;
+	list-style-position: inside;
+	li {
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 28px;
+	}
+}
+
+.b-text a {
+	text-decoration: underline;
+}
+
+.b-text--form {
+	font-weight: 300;
+}
+
+
+.hover-overlay {
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
+  .social-mash__tile:hover .hover-overlay {
+  	visibility: visible;
+  }

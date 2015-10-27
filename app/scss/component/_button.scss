@@ -16,16 +16,24 @@
   background-image: none;
   border: none;
   -webkit-font-smoothing: subpixel-antialiased;
-
   text-transform: uppercase;
   padding: 18px 30px;
   letter-spacing: .2em;
+    @if $theme == hiphop {
+      // default;
+    } @else if $theme == pop {
+      font-family: 'PT Sans Narrow';
+      font-weight: 700;
+    } @else {
+      // default;
+    }
 }
 
   .button:hover,
   .button:focus {
     color: #fff;
     background-color: #000;
+    outline: none;
   }
 
   .button:active,
@@ -43,12 +51,31 @@
   margin: 0 auto;
   background-color: transparent;
   color: #000;
+    &:hover, &:focus {
+      background-color: #000 !important;
+      color: #fff !important;
+    }
 }
 
-.button--inverse {
+.button--inverse-white {
   border: 3px solid #fff;
   color: #fff;
   background-color: transparent;
+    &:hover, &:focus {
+      background-color: #fff !important;
+      color: #000;
+    }
+}
+
+.button--inverse-theme {
+  border: 3px solid #000;
+  margin: 0 auto;
+  background-color: transparent;
+  color: #000;
+    &:hover, &:focus {
+      background-color: #000;
+      color: #fff !important;
+    }
 }
 
 /* Alternative Button */
@@ -90,7 +117,11 @@
 fieldset[disabled] {
   cursor: default !important;
   background-color: #eaeaea !important; 
-  color: #444; 
+  color: #ccc; 
+  border: none;
+    &:hover {
+      color: #ccc !important;
+    }
 }
 
 

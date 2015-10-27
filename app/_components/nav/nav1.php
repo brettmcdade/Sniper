@@ -7,7 +7,7 @@
                     <li><a href="music.php">Music</a></li>
                     <li><a href="videos.php">Videos</a></li>
                     <li><a href="tours.php">Tour</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="about.php">About</a></li>
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
                 <ul class="navigation__social">
@@ -37,9 +37,15 @@
             <li><a href="music.php">Music</a></li>
             <li><a href="videos.php">Videos</a></li>
             <li><a href="tours.php">Tour</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="about.php">About</a></li>
             <li><a href="contact.php">Contact</a></li>
-          </ul>        
+          </ul> 
+          <ul class="navigation__social">
+            <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+          </ul>       
        </nav>
     </div>
     <!-- End Off Canvas Menu -->

@@ -1,24 +1,65 @@
-$theme-color: $color-gold;
+/*
+Red: #ff4a4a
+Blue: #2196F3
+Orange: #FF9800
+Dark Blue: #01579B
+Green: #4caf50
+Brown: #795548
+Purple: #9c27b0
+Pink: #ec407a
+Gold: #caa84c
+Turquoise: #50c7c1
+*/
 
-.u-overlay {
-	background-color: $theme-color;
-	background-color: rgba(202,168,76,.8);
+$theme-color: #ff4a4a;
+
+/* Navigation */
+.navigation li a:hover {
+	color: $theme-color;
 }
 
-.nav-3 .logo,
+//.nav-3 .logo,
 .hamburger,
+.hamburger.close span.slice1, 
+.hamburger.close span.slice3 {
+	background: $theme-color;
+}
+
+
+/* Icons */
+.social-links--inline .social-link .fa,
+.b-text .fa-play-circle,
+.b-text .fa,
+.media__playlist li:hover:before,
+.is-playing:before {
+	color: $theme-color;
+}
+
+
+/* Text */
+.tour__month,
+.playlist-number,
+.b-meta,
+.b-text a,
+.b-section a {
+	color: $theme-color;	
+}
+.b-text .pullquote { 
+	border-color: $theme-color;
+}
+
+
+.u-overlay {
+	@include background-color($theme-color, 0.8);
+}
+
+
 .social-mash__tile--twitter .social-mash__content {
 	background-color: $theme-color;
 }
 
-.b-text .fa-play-circle,
-.tour__month,
-.track-number,
-.album__year,
-.b-text .fa {
-	color: $theme-color;
-}
 
+/* Buttons */
 .button--theme {
 	background-color: $theme-color;
 	  &:hover, &:focus {
@@ -26,16 +67,54 @@ $theme-color: $color-gold;
 	  }
 }
 
+
 .button:hover,
 .button:focus {
   color: #fff;
   background-color: $theme-color;
 }
 
-.tracks li:hover {
+.button--inverse-theme {
+  border: 3px solid $theme-color;
+    &:hover, &:focus {
+      background-color: $theme-color;
+      color: #fff;
+    }
+}
+
+.button--inverse-white {
+  &:hover, &:focus {
+    color: $theme-color;
+  }
+}
+
+.js-banner-track-is-active,
+.banner__action-btn:hover {
+	color: $theme-color;
+}
+
+
+
+.media__playlist li:hover {
 	background-color: #ededeb;
 }
 
 .hover-overlay {
-	background: rgba(202,168,76,.5);
+	@include background-color($theme-color, 0.5);
+}
+
+
+.tabs li.is-selected {
+	border-color: $theme-color;
+}
+
+
+.banner__subtitle {
+	color: $theme-color;
+}
+
+
+
+.bar {
+	background-color: $theme-color;
 }

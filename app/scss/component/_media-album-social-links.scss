@@ -1,0 +1,43 @@
+/* Social Links */
+.social-links--inline {
+	@include respond-min($bp-medium) {
+		max-width: 415px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@include respond-min($bp-large) {
+		max-width: none;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+.social-links--inline .social-link {
+	width: 33.33333%;
+	float: left;
+	font-size: 14px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	  @include respond-min($bp-medium) {
+	  	font-size: 16px;
+	  }
+		  a {
+		  	color: #000;
+		  }
+		  .fa {
+			  font-size: 20px;
+			  margin-right: 7px;
+			  display: block;
+			    @include respond-min($bp-medium) {
+			    	display: inline-block;
+			    }
+		  }
+			  @include respond-min($bp-medium) {
+				  &:first-child {
+				  	text-align: left;
+				  }
+				  &:last-child {
+				  	text-align: right;
+				  }
+				}
+}

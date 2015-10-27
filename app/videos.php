@@ -5,8 +5,8 @@
 	<!-- Remove this line and uncomment line below for a dark overlay over image -->
 	<!-- <div class="banner__overlay"></div> -->
 	<div class="banner__content">
-	    <div class="banner__title">Featured Video Title Goes Here</div>
-        <i class="banner__action-btn fa fa-play-circle"></i>
+	    <div class="banner__title">Video Title</div>
+        <i class="banner__action-btn fa fa-play-circle js-play-video" data-source="youtube" data-id="jYdaQJzcAcw"></i>
 	</div>
 </div>
 <!-- / Banner 2 -->
@@ -18,7 +18,7 @@
             <!-- Row -->
             <div class="grid grid--1to2 grid--first-row">
                 <div class="grid__column media__block">
-                    <div class="media__thumb">
+                    <div class="media__thumb js-play-video" data-source="youtube" data-id="jYdaQJzcAcw">
                         <img class="" src="images/fpo_video-thumb.png" />
                         <i class="fa fa-play-circle js-play-video"></i>
                     </div>
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="grid__column media__block">
-                    <div class="media__thumb">
+                    <div class="media__thumb js-play-video" data-source="youtube" data-id="jYdaQJzcAcw">
                         <img class="" src="images/fpo_video-thumb.png" />
                         <i class="fa fa-play-circle js-play-video"></i>
                     </div>
@@ -43,7 +43,7 @@
             <!-- Row -->
             <div class="grid grid--1to2">
                 <div class="grid__column media__block">
-                    <div class="media__thumb">
+                    <div class="media__thumb js-play-video" data-source="youtube" data-id="jYdaQJzcAcw">
                         <img class="" src="images/fpo_video-thumb.png" />
                         <i class="fa fa-play-circle js-play-video"></i>
                     </div>
@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div class="grid__column media__block">
-                    <div class="media__thumb">
+                    <div class="media__thumb js-play-video" data-source="youtube" data-id="jYdaQJzcAcw">
                         <img class="" src="images/fpo_video-thumb.png" />
                         <i class="fa fa-play-circle js-play-video"></i>
                     </div>

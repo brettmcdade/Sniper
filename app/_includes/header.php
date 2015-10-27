@@ -22,7 +22,8 @@
     
     <!-- Google Fonts: Oswald & Permanent Marker -->
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700|Permanent+Marker' rel='stylesheet' type='text/css'>
-
+    <!-- Google Fonts: PT Sans Narrow, Merriweather, & Abril Fatface -->
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|Merriweather:400,700|Abril+Fatface' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
@@ -32,6 +33,4 @@
 
     <?php include('_components/nav/nav1.php'); ?>
     <?php //include('_components/nav/nav2.php'); ?>
-    <?php // include('_components/nav/nav3.php'); ?>
-
-    <!-- / Nav 1 -->
+    <?php //include('_components/nav/nav3.php'); ?>
