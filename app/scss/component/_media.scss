@@ -226,7 +226,7 @@
 	list-style: none;
 }
 
-.media__playlist li {
+.media__playlist-item {
 	padding: 20px;
 	border-bottom: 1px solid #dcd9d5;
 	overflow: hidden;
@@ -234,8 +234,7 @@
 	cursor: pointer;
 }
 
-  .no-touch .media__playlist li:hover:before,
-  .is-playing:before {
+  .no-touch .media__playlist-item:hover:before {
   	content: '\f144';
   	font-family: 'FontAwesome';
   	font-size: 30px;
@@ -246,8 +245,12 @@
     left: 15px;
   }
 
-  .js-playlist-item-is-loading .playlist-number,
-  .is-playing .playlist-number {
+  .no-touch .js-action-is-playing .media__playlist-item:before {
+  	visibility: hidden;
+  }
+
+  .js-action-is-waiting .playlist-number,
+  .js-action-is-playing .playlist-number {
   	visibility: hidden;
   }
 
@@ -264,7 +267,7 @@
 	  }
 }
 
-  .no-touch .media__playlist li:hover .playlist-number {
+  .no-touch .media__playlist-item:hover .playlist-number {
   	visibility: hidden;
   }
 
@@ -297,12 +300,12 @@
 
 /* 
   Track is active */
-.js-track-is-active .playlist-number,
-.js-track-is-active .button--media,
-.js-action-is-loading-single .button--media {
+.js-is-active .playlist-number,
+.js-is-active .button--media,
+.js-is-active .button--media {
 	visibility: hidden;
 }
-.media__playlist .js-track-is-active {
+.media__playlist .js-is-active {
 	background-color: #ededeb;
 }
 
@@ -370,11 +373,11 @@
 
 /*
   Track is loading */
-.js-track-is-loading .bar {
+.js-action-is-waiting .bar {
   height: 2px !important;
 }
 
-.no-touch .js-playlist-item-is-loading:hover:before {
+.no-touch .js-action-is-waiting:hover:before {
   display: none;
 }
 
@@ -383,21 +386,21 @@
 /* 
   Track is active */
 
-.no-touch .js-track-is-active:hover:before {
+.no-touch .js-active:hover:before {
   display: none;
 }
 
 
 
-.js-track-is-playing .bar#bar-1{
+.js-action-is-playing .bar#bar-1{
 	animation-name:danceHeight1;
 	animation-delay:100ms;
 }
-.js-track-is-playing .bar#bar-2{
+.js-action-is-playing .bar#bar-2{
 	animation-name:danceHeight2;
 	animation-delay:300ms;
 }
-.js-track-is-playing .bar#bar-3{
+.js-action-is-playing .bar#bar-3{
 	animation-name:danceHeight3;
 	animation-delay:500ms;
 }

@@ -15,8 +15,18 @@ body {
   line-height: 1.5;
 }
 
+body:after {
+  content: 'smalllayout';
+  display: none;
+	  @include respond-min($bp-large) {
+	    content: 'largelayout';
+	  }
+} 
+
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
 }
+
+
 

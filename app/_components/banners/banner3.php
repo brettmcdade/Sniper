@@ -1,5 +1,5 @@
 <!-- Masthead 3 -->
-<div class="banner banner--large" style="background-image:url('http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2015/1/20/1421753522830/aa5dbac7-3b7e-4f99-84be-97477474eaa1-2060x1236.jpeg');">
+<div class="banner banner--large" style="background-image:url('images/fpo-banner-face.jpg');">
 	<!-- Remove this line and uncomment line below for a dark overlay over image -->
 	<!-- <div class="banner__overlay"></div> -->
 	<div class="banner__content">

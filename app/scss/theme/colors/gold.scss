@@ -30,8 +30,8 @@ $theme-color: #ff4a4a;
 .social-links--inline .social-link .fa,
 .b-text .fa-play-circle,
 .b-text .fa,
-.media__playlist li:hover:before,
-.is-playing:before {
+.media__playlist-item:hover:before,
+.js-action-is-playing:before {
 	color: $theme-color;
 }
 
@@ -95,7 +95,7 @@ $theme-color: #ff4a4a;
 
 
 
-.media__playlist li:hover {
+.media__playlist-item:hover {
 	background-color: #ededeb;
 }
 
