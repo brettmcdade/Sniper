@@ -115,7 +115,7 @@
                   <div class="media__playlist">
                     <ul>
                     	<li class="js-action">
-                    	  <div class="js-play-album media__playlist-item" data-title="Song Title 1" data-url="http://brettmcdade.com/audio/Dom_Kennedy/My_Type_Of_Party.mp3">
+                    	  <div class="js-play-album media__playlist-item" data-title="Song Title 1" data-url="http://brettmcdade.com/audio/13 - Lloyd Banks - Holding You Down.mp3">
                           <div class="js-state-of-track"></div>
                           <div class="playlist-number">01</div>
                           <div class="playlist-title">My Type Of Party</div>
@@ -123,7 +123,7 @@
                         </div>
                       </li>
                     	<li class="js-action">
-                    	  <div class="js-play-album media__playlist-item" data-title="Song Title 1" data-url="http://brettmcdade.com/audio/Dom_Kennedy/Lately.mp3">
+                        <div class="js-play-album media__playlist-item" data-title="Song Title 2" data-url="http://brettmcdade.com/audio/13 - Lloyd Banks - Holding You Down.mp3">
                           <div class="js-state-of-track"></div>
                           <div class="playlist-number">02</div>
                           <div class="playlist-title">Lately</div>
@@ -131,7 +131,7 @@
                         </div>
                       </li>
                     	<li class="js-action">
-                    	  <div class="js-play-album media__playlist-item" data-title="Song Title 1" data-url="http://brettmcdade.com/audio/Dom_Kennedy/Gold_Alpinas.mp3">
+                        <div class="js-play-album media__playlist-item" data-title="Song Title 3" data-url="http://brettmcdade.com/audio/13 - Lloyd Banks - Holding You Down.mp3">
                           <div class="js-state-of-track"></div>
                           <div class="playlist-number">03</div>
                           <div class="playlist-title">Gold Alpinas</div>
@@ -168,12 +168,14 @@
                         <?php
                           for($i=1; $i<10; $i++) {
                         ?>
-                            <li class="js-play-album" data-title="Song Title 3" data-url="http://brettmcdade.com/audio/Dom_Kennedy/Gold_Alpinas.mp3">
-			                          <div class="js-state-of-track"></div>
-			                          <div class="playlist-number">0<?php echo $i;?></div>
-			                          <div class="playlist-title">Gold Alpinas</div>
-			                          <div class="playlist-time">2:20</div>
-			                      </li>
+                          <li class="js-action">
+                            <div class="js-play-album media__playlist-item" data-title="Song Title 1" data-url="http://brettmcdade.com/audio/Dom_Kennedy/Gold_Alpinas.mp3">
+                              <div class="js-state-of-track"></div>
+                              <div class="playlist-number">0<?php echo $i;?></div>
+                              <div class="playlist-title">Gold Alpinas</div>
+                              <div class="playlist-time">2:20</div>
+                            </div>
+                          </li>
                         <?php   
                           }
                         ?>
