@@ -30,7 +30,17 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'app/build/css/stylesheet.css': 'app/scss/stylesheet.scss',
-                    'app/build/css/old-ie.css': 'app/scss/old-ie.scss'
+                    'app/build/css/old-ie.css': 'app/scss/old-ie.scss',
+                    'app/build/css/colors/blue.css': 'app/scss/theme/colors/blue.scss',
+                    'app/build/css/colors/brown.css': 'app/scss/theme/colors/brown.scss',
+                    'app/build/css/colors/dark-blue.css': 'app/scss/theme/colors/dark-blue.scss',
+                    'app/build/css/colors/gold.css': 'app/scss/theme/colors/gold.scss',
+                    'app/build/css/colors/green.css': 'app/scss/theme/colors/green.scss',
+                    'app/build/css/colors/orange.css': 'app/scss/theme/colors/orange.scss',
+                    'app/build/css/colors/pink.css': 'app/scss/theme/colors/pink.scss',
+                    'app/build/css/colors/purple.css': 'app/scss/theme/colors/purple.scss',
+                    'app/build/css/colors/red.css': 'app/scss/theme/colors/red.scss',
+                    'app/build/css/colors/turquoise.css': 'app/scss/theme/colors/turquoise.scss'
                 }
             } 
         },

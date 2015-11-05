@@ -32,6 +32,14 @@
   text-align: center;
 }
 
+.banner__content .js-action {
+  cursor: default;
+}
+
+.banner__content .js-play {
+  display: inline-block;
+}
+
 .banner__subtitle {
   font-family: $body-font;
   font-size: 24px;
@@ -59,6 +67,10 @@
   max-width: 650px;
   margin: 0 auto;
   word-break: break-word;
+    @if $theme == classic {
+      font-weight: 700;
+      text-transform: initial;
+    }
     @include respond-min($bp-medium) {
       font-size: 58px;
     }
@@ -73,8 +85,10 @@
           font-size: 104px;
         } @else if $theme == pop {
           font-size: 75px;
+        } @else if $theme == classic {
+          font-size: 75px;
         } @else {
-          // default;
+          font-size: 75px;
         }
     }
 }

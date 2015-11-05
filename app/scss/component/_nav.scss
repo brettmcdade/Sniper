@@ -89,10 +89,10 @@
       // default;
     } @else if $theme == pop {
       font-family: 'PT Sans Narrow';
-      font-size: 15px;
+      //font-size: 15px;
       font-weight: 700;
-    } @else {
-      // default;
+    } @else if $theme == classic {
+      padding: 0 23px;
     }
 }
 

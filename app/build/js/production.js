@@ -227,39 +227,39 @@
 
 
 
-  $(window).resize(function() {
-    size = window.getComputedStyle(document.body,':after').getPropertyValue('content');
+$(window).resize(function() {
+  size = window.getComputedStyle(document.body,':after').getPropertyValue('content');
+});
+
+
+
+
+/* -----------------------------------------
+ Responsive Video Lightbox
+ ----------------------------------------- */
+function lightboxInit() {
+  $('.js-play-video').click(function(){
+    //myPlaylist.pause();
+    //trackEnded();
+    var $thisHref = $(this).attr('data-id');
+    var source = $(this).attr('data-source');
+    buildLightBox($thisHref, source);
+  }); 
+}
+
+function buildLightBox(id, source) {
+  if (source == 'youtube') {
+    $('<div class="media--video__content">').appendTo('body').html('<div class="layer"><iframe id="video" width="100%" height="100%" src="http://www.youtube.com/embed/' + id + '?enablejsapi=1&vq=hd1080&controls=1&rel=0&fs=1&modestbranding=1&showinfo=0&wmode=transparent&autoplay=1" frameborder="0"></iframe></div><div class="close js-close"></div>');
+  } 
+  if (source == 'vimeo') {
+    $('<div class="media--video__content">').appendTo('body').html('<div class="layer"><iframe width="100%" height="100%" src="//player.vimeo.com/video/' + id + '?api=1&amp;autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="video"></iframe></div><div class="close js-close"></div>');
+  } 
+  
+  // Create close button
+  $('.js-close').on('click',function(e) {
+    $('.media--video__content').remove();
   });
-
-
-
-
-  /* -----------------------------------------
-   Responsive Video Lightbox
-   ----------------------------------------- */
-  function lightboxInit() {
-    $('.js-play-video').click(function(){
-      myPlaylist.pause();
-      trackEnded();
-      var $thisHref = $(this).attr('data-id');
-      var source = $(this).attr('data-source');
-      buildLightBox($thisHref, source);
-    }); 
-  }
-
-  function buildLightBox(id, source) {
-    if (source == 'youtube') {
-      $('<div class="media--video__content">').appendTo('body').html('<div class="layer"><iframe id="video" width="100%" height="100%" src="http://www.youtube.com/embed/' + id + '?enablejsapi=1&vq=hd1080&controls=1&rel=0&fs=1&modestbranding=1&showinfo=0&wmode=transparent&autoplay=1" frameborder="0"></iframe></div><div class="close js-close"></div>');
-    } 
-    if (source == 'vimeo') {
-      $('<div class="media--video__content">').appendTo('body').html('<div class="layer"><iframe width="100%" height="100%" src="//player.vimeo.com/video/' + id + '?api=1&amp;autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="video"></iframe></div><div class="close js-close"></div>');
-    } 
-    
-    // Create close button
-    $('.js-close').on('click',function(e) {
-      $('.media--video__content').remove();
-    });
-  }
+}
 
 
 

@@ -16,6 +16,9 @@
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
     <link rel="stylesheet" href="build/css/stylesheet.css">
 
+    <!-- Colors -->
+    <link rel="stylesheet" href="build/css/colors/gold.css">
+
     <!-- =====================================================================
     FONTS
     ========================================================================== -->
@@ -23,7 +26,9 @@
     <!-- Google Fonts: Oswald & Permanent Marker -->
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700|Permanent+Marker' rel='stylesheet' type='text/css'>
     <!-- Google Fonts: PT Sans Narrow, Merriweather, & Abril Fatface -->
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|Merriweather:400,700|Abril+Fatface' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|Merriweather:300,400,700|Abril+Fatface' rel='stylesheet' type='text/css'>
+    <!-- Google Fonts: Work Sans -->
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
   </head>
 
   <body>

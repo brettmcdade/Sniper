@@ -5,7 +5,7 @@ $(document).ready(function() {
 	var singlePlaying = false;
 	var albumPlaying = false;
 
-	var playListSize = 0;
+	var playListSize = $('.js-play-album').length;
 
 
 	// Playlist
@@ -40,7 +40,7 @@ $(document).ready(function() {
 		var index = $(".js-play-album").index(this);
 
 		if (!albumPlaying) {
-
+			$("#jquery_jplayer_Playlist").jPlayer("pauseOthers");
 			var output = 'myPlaylist.setPlaylist([';
 
 			var cells = $('.js-play-album');
@@ -52,17 +52,21 @@ $(document).ready(function() {
 
 			output += ']);';
 
-			//console.log(output)
-
 			eval(output);
 
 			myPlaylist.play(index); // Play selected track automatically
 
 		} 
 		else {
-			// if jPlayer is playing just play selected track
-			myPlaylist.play(index); 
-			//stopPlayVisuals();
+			// if we select another track while a track is playing, play selected track. If we select track that is already playing then lets stop it
+			if(index != myPlaylist.current) {
+			  myPlaylist.play(index); 
+			}
+			else {
+				myPlaylist.pause();
+			  stopPlayVisuals();
+			  albumPlaying = false;
+			}
 		}
 
 		$("#jquery_jplayer_Playlist").bind($.jPlayer.event.waiting, function() {
@@ -80,10 +84,13 @@ $(document).ready(function() {
 	  });
 
 	  $("#jquery_jplayer_Playlist").bind($.jPlayer.event.ended, function() {
+	  	//$("#jquery_jplayer_Playlist").unbind($.jPlayer.event.ended);
+	  	stopPlayVisuals();
+	  	albumPlaying = false;
 		  var current = myPlaylist.current;
 		  index = index+1;
-		  if(current < cells.length - 1) {
-		  	updatePlaylistItem(index); // When playlist moves to next song update active playlist item
+		  if(current < playListSize) {
+		  	updatePlaylistItem(current); // When playlist moves to next song update active playlist item
 		  }
 		});
 
@@ -96,14 +103,13 @@ $(document).ready(function() {
 		$(".js-action").removeClass("js-is-active");
 		$(".js-action").removeClass("js-action-is-playing");
 		$(".js-action").removeClass("js-action-is-waiting");
+		$(".js-action").removeClass("js-current");
 		$(".js-state-of-track").html('');
-		//albumPlaying = false;
 	}
 
 	function updatePlaylistItem(indexItem) {
 		//var next = $(".js-is-active").next();
 		var x = indexItem;
-		stopPlayVisuals();
 		
     $("#jquery_jplayer_Playlist").bind($.jPlayer.event.waiting, function() {
     	$("#jquery_jplayer_Playlist").unbind($.jPlayer.event.waiting);
@@ -116,6 +122,7 @@ $(document).ready(function() {
 	  	$("#jquery_jplayer_Playlist").unbind($.jPlayer.event.playing);
 			$(".js-play-album").eq(x).parent().removeClass("js-action-is-waiting");
 	    $(".js-play-album").eq(x).parent().addClass('js-action-is-playing');
+	    albumPlaying = true;
 	  });
 	}
 
@@ -136,21 +143,27 @@ $(document).ready(function() {
 	$(document).on("click", ".js-play", function(e) {
     e.preventDefault();
 
+    // function to stop other players
+    stopPlayVisuals();
+    singlePlayer.jPlayer("pauseOthers");
+    //$("#jquery_jplayer_Playlist").jPlayer("pause");
+
     var self = $(this);
     var songTitle = self.data('title');
     var songUrlMp3 = self.data('url');
-    var holder = self.parents(".js-action");
+    var holder = self.parent(".js-action");
+		var indicator = self.children(".js-state-of-track");
 
-    // function to stop other players
-    $("#jquery_jplayer_Playlist").jPlayer("stop");
-
+    
+    
     $('.js-action').removeClass('js-current');
     holder.addClass('js-current');
 
     if(singlePlaying) {
     	singlePlayer.jPlayer("pause");
+    	$('.js-action .js-pause').removeClass('js-pause').addClass('js-play');
     } else {
-    	$("#jquery_jplayer_Playlist").jPlayer("stop");
+    	singlePlayer.jPlayer("pauseOthers");
     }
 
 
@@ -159,8 +172,55 @@ $(document).ready(function() {
 	    mp3: songUrlMp3
     }).jPlayer("play");
 
-    singlePlaying = true;
+
+
+    singlePlayer.bind($.jPlayer.event.waiting, function() {
+			singlePlayer.unbind($.jPlayer.event.waiting);
+			holder.addClass("js-is-active");
+    	holder.addClass("js-action-is-waiting");
+    	indicator.html('<div class="bar-c"><div id="bar-1" class="bar"></div><div id="bar-2" class="bar"></div><div id="bar-3" class="bar"></div></div>');
+	  });
+
+	  singlePlayer.bind($.jPlayer.event.playing, function() {
+	  	singlePlayer.unbind($.jPlayer.event.playing);
+			holder.removeClass("js-action-is-waiting");
+	    holder.addClass('js-action-is-playing');
+	      self.removeClass('js-play').addClass('js-pause');
+	    singlePlaying = true;
+	    albumPlaying = false;
+	  });
+
+	  singlePlayer.bind($.jPlayer.event.ended, function() {
+	  	//$("#jquery_jplayer_Playlist").unbind($.jPlayer.event.ended);
+	  	stopPlayVisuals();
+	  	singlePlaying = false;
+		});
+
   });
+
+	
+	$(document).on("click", ".js-pause", function(e) {
+    var self = $(this);    
+		
+		singlePlayer.jPlayer("pause");
+		
+		  
+		stopPlayVisuals();
+
+		singlePlaying = false;
+	    self.removeClass('js-pause').addClass('js-play');		
+		return false;
+	});
+
+
+
+	$(document).on("click", ".js-play-video", function(e) {
+		singlePlayer.jPlayer("pause");
+    myPlaylist.pause();
+    stopPlayVisuals();
+    singlePlaying = false;
+    albumPlaying = false;
+  }); 
 
 
 

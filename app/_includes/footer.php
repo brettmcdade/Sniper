@@ -30,13 +30,13 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
-    <!-- Custom js -->
-    <script type="text/javascript" src="js/main.js"></script>
-
     <!-- jPlayer scripts -->
     <script type="text/javascript" src="js/plugins/jplayer/jplayer/jquery.jplayer.min.js"></script>
     <script type="text/javascript" src="js/plugins/jplayer/add-on/jplayer.playlist.min.js"></script>
     <script type="text/javascript" src="js/audio-testing.js"></script>
+
+    <!-- Custom js -->
+    <script type="text/javascript" src="js/main.js"></script>
 
     <!--
     <script src="build/js/production.min.js"></script> 

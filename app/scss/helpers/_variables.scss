@@ -163,6 +163,10 @@ $theme: hiphop;
   $global-font-family: 'Merriweather', serif;
   $display-font: 'Abril Fatface', cursive;
   $body-font: 'Merriweather', serif;
+} @else if $theme == classic {
+  $global-font-family: 'Work Sans', sans-serif;
+  $display-font: 'Work Sans', sans-serif;
+  $body-font: 'Work Sans', sans-serif;
 } @else {
   // default;
 }

@@ -1,7 +1,7 @@
 <?php include('_includes/header.php'); ?>
 
 <!-- Banner 2 -->
-<div class="banner" style="background-image:url('images/fpo_banner.png');">
+<div class="banner" style="background-image:url('images/banner_music_hiphop.jpg');">
 	<!-- <div class="banner__overlay"></div> -->
 	<div class="banner__content">
    <div class="banner__title banner__title--large">Music</div>
@@ -98,21 +98,23 @@
                     <div class="b-meta">2015</div>
                   </div>
                   <div class="media__playlist">
-                    <ul>
-                        <?php
-                          for($i=1; $i<10; $i++) {
-                        ?>
-                            <li class="js-play-album" data-title="Test" data-streamurl="http://brettmcdade.com/audio/Dom_Kennedy/Gold_Alpinas">
-                                <div class="js-state-of-track"></div>
-                                <div class="playlist-number">0<?php echo $i;?></div>
-                                <div class="playlist-title">A Real Long Song Name</div>
-                                <div class="playlist-time">2:20</div>
-                            </li>
-                        <?php   
-                          }
-                        ?>
-                    </ul>
-                  </div>
+                <ul>
+                  <?php
+                  for($i=1; $i<10; $i++) {
+                    ?>
+                    <li class="js-action">
+                      <div class="js-play-album media__playlist-item" data-title="Song Title 1" data-url="http://brettmcdade.com/audio/13 - Lloyd Banks - Holding You Down.mp3">
+                        <div class="js-state-of-track"></div>
+                        <div class="playlist-number">0<?php echo $i;?></div>
+                        <div class="playlist-title">Gold Alpinas</div>
+                        <div class="playlist-time">2:20</div>
+                      </div>
+                    </li>
+                    <?php   
+                  }
+                  ?>
+                </ul>
+              </div>
                 </div>
               </div>
             </div>
@@ -137,21 +139,23 @@
                     <div class="b-meta">2015</div>
                   </div>
                   <div class="media__playlist">
-                    <ul>
-                        <?php
-                          for($i=1; $i<10; $i++) {
-                        ?>
-                            <li class="js-play-album" data-title="Test" data-streamurl="http://brettmcdade.com/audio/Dom_Kennedy/Gold_Alpinas">
-                                <div class="js-state-of-track"></div>
-                                <div class="playlist-number">0<?php echo $i;?></div>
-                                <div class="playlist-title">A Real Long Song Name</div>
-                                <div class="playlist-time">2:20</div>
-                            </li>
-                        <?php   
-                          }
-                        ?>
-                    </ul>
-                  </div>
+                <ul>
+                  <?php
+                  for($i=1; $i<10; $i++) {
+                    ?>
+                    <li class="js-action">
+                      <div class="js-play-album media__playlist-item" data-title="Song Title 1" data-url="http://brettmcdade.com/audio/13 - Lloyd Banks - Holding You Down.mp3">
+                        <div class="js-state-of-track"></div>
+                        <div class="playlist-number">0<?php echo $i;?></div>
+                        <div class="playlist-title">Gold Alpinas</div>
+                        <div class="playlist-time">2:20</div>
+                      </div>
+                    </li>
+                    <?php   
+                  }
+                  ?>
+                </ul>
+              </div>
                 </div>
               </div>
             </div>
@@ -174,21 +178,23 @@
                     <div class="b-meta">2015</div>
                   </div>
                   <div class="media__playlist">
-                    <ul>
-                        <?php
-                          for($i=1; $i<10; $i++) {
-                        ?>
-                            <li class="js-play-album" data-title="Test" data-streamurl="http://brettmcdade.com/audio/Dom_Kennedy/Gold_Alpinas">
-                                <div class="js-state-of-track"></div>
-                                <div class="playlist-number">0<?php echo $i;?></div>
-                                <div class="playlist-title">A Real Long Song Name</div>
-                                <div class="playlist-time">2:20</div>
-                            </li>
-                        <?php   
-                          }
-                        ?>
-                    </ul>
-                  </div>
+                <ul>
+                  <?php
+                  for($i=1; $i<10; $i++) {
+                    ?>
+                    <li class="js-action">
+                      <div class="js-play-album media__playlist-item" data-title="Song Title 1" data-url="http://brettmcdade.com/audio/13 - Lloyd Banks - Holding You Down.mp3">
+                        <div class="js-state-of-track"></div>
+                        <div class="playlist-number">0<?php echo $i;?></div>
+                        <div class="playlist-title">Gold Alpinas</div>
+                        <div class="playlist-time">2:20</div>
+                      </div>
+                    </li>
+                    <?php   
+                  }
+                  ?>
+                </ul>
+              </div>
                 </div>
               </div>
             </div>

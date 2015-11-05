@@ -169,7 +169,7 @@
                           for($i=1; $i<10; $i++) {
                         ?>
                           <li class="js-action">
-                            <div class="js-play-album media__playlist-item" data-title="Song Title 1" data-url="http://brettmcdade.com/audio/Dom_Kennedy/Gold_Alpinas.mp3">
+                            <div class="js-play-album media__playlist-item" data-title="Song Title 1" data-url="http://brettmcdade.com/audio/13 - Lloyd Banks - Holding You Down.mp3">
                               <div class="js-state-of-track"></div>
                               <div class="playlist-number">0<?php echo $i;?></div>
                               <div class="playlist-title">Gold Alpinas</div>
