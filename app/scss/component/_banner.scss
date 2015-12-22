@@ -109,11 +109,12 @@
 .banner__action-btn {
 	font-size: 80px;
 	color: #fff;
-	display: block;
+	display: inline-block;
 	text-align: center;
 	margin-top: 25px;
 	cursor: pointer;
 }
+
 
 /* Overlay masthead image if needed */
 .banner__overlay {

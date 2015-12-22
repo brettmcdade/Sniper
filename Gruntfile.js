@@ -77,15 +77,26 @@ module.exports = function(grunt) {
             }
         }, //end imagemin
 
-        php: {
-            dist: {
-                options: {
-                    hostname: '127.0.0.1',
-                    port: 9000,
-                    base: 'app', // Project root
-                    keepalive: false,
-                    open: false
-                }
+        // Build the site using grunt-includes
+        includes: {
+          build: {
+            cwd: 'app',
+            src: ['*.html', 'app/_includes/*.html', 'app/_components/*/*.html'],
+            dest: 'app/build/',
+            options: {
+              flatten: true,
+              includePath: 'app'
+              //banner: '<!-- Site built using grunt includes! -->\n'
+            }
+          }
+        }, 
+
+        connect: {
+            server: {
+              options: {
+                port: 8000,
+                base: 'app/build'
+              }
             }
         },
 
@@ -93,22 +104,24 @@ module.exports = function(grunt) {
             dev: {
                 bsFiles: {
                     src : [
-                        'app/*.php',
-                        'app/_includes/*.php',
+                        'app/*.html',
+                        'app/_includes/*.html',
+                        'app/_components/*/*.html',
                         'app/build/css/*.css'
                     ]
                 },
                 options: {
-                    proxy: '<%= php.dist.options.hostname %>:<%= php.dist.options.port %>', //our PHP server
                     open: true,
                     notify: true,
-                    watchTask: true
+                    watchTask: true,
+                    server: 'app/build'
                 }
             }
         },
 
         watch: {
 
+            /*
             scripts: {
                 files: ['app/js/*.js'],
                 tasks: ['concat', 'uglify'],
@@ -116,7 +129,8 @@ module.exports = function(grunt) {
                   spawn: false,
                 },
             },
-
+            */
+            
             css: {
                 files: ['app/scss/*.scss', 'app/scss/**/*.scss'],
                 tasks: ['sass','autoprefixer'],
@@ -135,24 +149,33 @@ module.exports = function(grunt) {
                 tasks: ['delete_sync']
             }, /* end of delete sync*/
 
+            includes: {
+                files: ['app/*.html', 'app/_includes/*.html', 'app/_components/*/*.html'],
+                tasks: ['includes'],
+                options: {
+                    spawn: false,
+                }
+            }
+
         },
 
 
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
-    grunt.loadNpmTasks('grunt-php');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-connect');    
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-newer');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-delete-sync');
+    grunt.loadNpmTasks('grunt-includes');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['php', 'browserSync', 'watch']);
+    grunt.registerTask('default', ['browserSync', 'includes', 'connect', 'watch']);
 
 };

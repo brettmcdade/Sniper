@@ -38,7 +38,8 @@ $theme-color: #795548;
 .b-text .fa-play-circle,
 .b-text .fa,
 .media__playlist-item:hover:before,
-.js-action-is-playing:before {
+.js-action-is-playing:before,
+.js-action-is-playing .banner__action-btn {
 	color: $theme-color;
 }
 

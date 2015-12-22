@@ -115,6 +115,10 @@
 	}
 }
 
+.media--video .media__block:hover .hover-overlay {
+  visibility: visible;
+}
+
   .media--video .b-text {
   	padding-bottom: 30px;
     border-bottom: 1px solid #dcd9d5;

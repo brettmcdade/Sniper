@@ -23,40 +23,30 @@
   	}
   }
 
+  /* Navigation 3 */
   .l-header--3 {
   	text-align: left;
   	background-color: #000;
   	  .navigation--header {
 	  		@include respond-min($bp-large) {
-					padding: 0;
+					padding: 45px 0;
+					overflow: hidden;
 				}
 	  	}
-	  	.logo {
-	  		float: left;
-	  		width: 32.5%;
-	  		padding: 35px 60px;
-	  	}
-	  	.logo img {
-	  		float: right;
-	  	}
-	  	.navigation__links {
-	  		float: left;
-	  		padding: 35px 0 35px 92px;
-	  		margin-top: 2px;
-	  	}
-	  	.navigation__social {
-	  		float: left;
-	  		padding: 28px 0 0;
-	  	}
-	  	.navigation__social a {
-	  		color: #666;
-	  	}
-	  	.navigation__links a {
-	  		font-size: 15px;
-	  		padding: 0 18px;
-	  	}
+  	.logo {
+  		float: left;
+  		width: 32.5%;
+  	}
+  	.navigation__links {
+  		float: right;
+  		margin-top: 2px;
+  	}
+  	.navigation__links a {
+  		//font-size: 15px;
+  		padding: 0 18px;
+  	}
   }
-  
+
 .navigation {
 	display: block;
 	text-align: center;
